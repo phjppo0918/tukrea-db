@@ -1,6 +1,7 @@
 실행하면 DB 생성됨
 
-<img width="694" alt="image" src="https://github.com/phjppo0918/tukrea-db/assets/55674648/e87244d0-95d4-4dc0-a537-a2e4be903a1f">
+<img width="1137" alt="image" src="https://github.com/phjppo0918/tukrea-db/assets/55674648/5cc415f3-aeed-4452-9b10-1c9f71667ca1">
+
 
 # dump 
 
