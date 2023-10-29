@@ -45,6 +45,36 @@ LOCK TABLES `answer` WRITE;
 /*!40000 ALTER TABLE `answer` ENABLE KEYS */;
 UNLOCK TABLES;
 
+
+--
+-- Table structure for table `answer_comment`
+--
+
+DROP TABLE IF EXISTS `answer_comment`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `answer_comment` (
+  `answer_id` bigint DEFAULT NULL,
+  `id` bigint NOT NULL,
+  `content` varchar(255) DEFAULT NULL,
+  `writer_email` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKbi4ojf23mofyyc9wmmslub4ln` (`answer_id`),
+  KEY `FK27qo6duyy6vtdxssttaber0ba` (`writer_email`),
+  CONSTRAINT `FK27qo6duyy6vtdxssttaber0ba` FOREIGN KEY (`writer_email`) REFERENCES `member` (`email`),
+  CONSTRAINT `FKbi4ojf23mofyyc9wmmslub4ln` FOREIGN KEY (`answer_id`) REFERENCES `answer` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `answer_comment`
+--
+
+LOCK TABLES `answer_comment` WRITE;
+/*!40000 ALTER TABLE `answer_comment` DISABLE KEYS */;
+/*!40000 ALTER TABLE `answer_comment` ENABLE KEYS */;
+UNLOCK TABLES;
+
 --
 -- Table structure for table `answer_vote`
 --
